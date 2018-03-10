@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h1>Angular Demo</h1>
+  </div>
+</div>
+
+<h2>Multiplication</h2>
+<br />
+
+<div class="row">
+  <div class="col-sm-3">
+    <h5>Please type in a number:</h5>
+  </div>
+  <div class="col-sm-9">
+    <input type="number" [(ngModel)]="first"/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <h5>Please type in another number:</h5>
+  </div>
+  <div class="col-sm-9">
+    <input type="number" [(ngModel)]="second"/>
+  </div>
+</div>
+
+<br />
+<div class="row">
+  <div class="col-sm-3">
+    <input type="button" value="Press to Multiply the Numbers" (click)="performMultiplication()" />
+  </div>
+  <div class="col-sm-3">
+    <input type="button" value="Press to Clear Values" (click)="clearValues()" />
+  </div>
+</div>
+
+<div class="row" *ngIf="result">
+  <div class="col-sm-3 text-right">
+    <h3>Results:</h3>
+  </div>
+  <div class="col-sm-9">
+    <h3>{{ result }}</h3>
+  </div>
+</div>
+
+
