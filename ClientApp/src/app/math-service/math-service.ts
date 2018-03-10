@@ -20,14 +20,7 @@ export class MathService {
 
   multiplyNumbers(first: number, second: number): Observable<number> {
     let params = new HttpParams().set('firstNumber', first.toString()).set('secondNumber', second.toString());
-
     return this.client.get<number>(this.url + 'api/Math/Multiply', { params });
-
-    //this.client.get<number>(this.url + 'api/Math/Multiply', { params }).subscribe(result => {
-    //  this.result = result;
-    //  return result;
-    //}, error => console.error(error));
-
   }
 
 }
